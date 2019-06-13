@@ -2,6 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -9,46 +12,64 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/node" />
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@android:color/white"
+                android:layout_alignParentRight="true"
+                android:text="5.0"/>
+            <ImageView
+                android:id="@+id/ivBookImage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/node" />
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="10dp"
                 android:layout_weight="3">
 
                 <TextView
+                    android:id="@+id/tvBookTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
+                    android:singleLine="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                     android:textColor="@android:color/white"
                     android:text="Android Developer Book"/>
                 <TextView
+                    android:id="@+id/tvBookAuthor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
+                    android:singleLine="true"
                     android:textColor="@android:color/white"
                     android:text="Chit Oo Nyo"/>
+
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/ivBookFavourite"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:src="@drawable/ic_outline_favourite" />
         </LinearLayout>
     </LinearLayout>
