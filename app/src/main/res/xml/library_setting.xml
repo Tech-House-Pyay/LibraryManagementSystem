@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        app:key="allbook"
+        app:title="All Book"
+        android:icon="@drawable/ic_action_allbook"
+        app:fragment="com.example.settingandroid.ui.Message"
+        app:summary="Book Count"/>
+    <Preference
+        app:key="issuedbook"
+        app:title="Issued Book"
+        android:icon="@drawable/ic_action_issuebook"
+        app:fragment="com.example.settingandroid.ui.Message"
+        app:summary="Issued Book Count"/>
+    <ListPreference
+        android:icon="@drawable/ic_action_textsize"
+        android:key="textSize"
+        android:title="Text Size"
+        android:entries="@array/library_fontsize"
+        android:entryValues="@array/library_font_index"/>
+    <Preference
+        app:key="exit"
+        app:title="Exit"
+        android:icon="@drawable/ic_action_exit"
+        app:fragment="com.example.settingandroid.ui.Message"
+       />
+
+</PreferenceScreen>

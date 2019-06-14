@@ -1,7 +1,10 @@
 package com.techhousestudio.locallibrary;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       // adjustFontScale(getResources().getConfiguration());
         setContentView(R.layout.activity_main);
         initViews();
 
@@ -67,4 +71,13 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabs);
         mainViewPager = findViewById(R.id.mainViewPager);
     }
+//    public void adjustFontScale(Configuration configuration)
+//    {
+//        configuration.fontScale = (float) 1.0;
+//        DisplayMetrics metrics = getResources().getDisplayMetrics();
+//        WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
+//        wm.getDefaultDisplay().getMetrics(metrics);
+//        metrics.scaledDensity = configuration.fontScale * metrics.density;
+//        getBaseContext().getResources().updateConfiguration(configuration, metrics);
+//    }
 }
