@@ -3,12 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.CategoryFragment">
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is category fragment"
-        />
+        >
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/romantic"
+                android:id="@+id/imgRomentic"
+
+                />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_alignTop="@+id/imgRomentic"
+            android:layout_marginTop="242dp"
+
+
+            android:text="This is Romantic category"
+            android:textColor="#0C0303" />
+
+
+
+    </RelativeLayout>
+
 
 
 </LinearLayout>
