@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         >
         <TextView
-            android:id="@+id/txtcategory"
+            android:id="@+id/tvcategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
@@ -25,24 +25,39 @@
         <ImageView
             android:id="@+id/imgcategory"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+        android:layout_height="200dp"
 
-            android:layout_below="@+id/txtcategory"
+
+            android:layout_below="@+id/tvcategory"
+
+
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="5dp"
 
 
             android:src="@drawable/romantic" />
 
         <TextView
-            android:id="@+id/txtCustomText"
+            android:id="@+id/tvDescription"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgcategory"
 
-            android:layout_marginTop="-52dp"
+
+
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="-63dp"
+            android:layout_marginBottom="-57dp"
             android:text="This is romantic category."
             android:textColor="#092BE7"
-            android:textSize="20sp" />
+            android:padding="10dp"
+            android:focusableInTouchMode="true"
+
+            android:textSize="15sp" />
 
     </RelativeLayout>
 

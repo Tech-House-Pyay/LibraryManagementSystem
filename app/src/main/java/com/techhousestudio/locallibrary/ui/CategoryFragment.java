@@ -12,9 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.techhousestudio.locallibrary.R;
-import com.techhousestudio.locallibrary.adapters.BookCatagoryAdapter;
-import com.techhousestudio.locallibrary.adapters.BookRecyclerAdapter;
-import com.techhousestudio.locallibrary.models.Book;
+import com.techhousestudio.locallibrary.adapters.BookCatagoryRecyclerAdapter;
 import com.techhousestudio.locallibrary.models.BookCategory;
 import com.techhousestudio.locallibrary.utitlities.GridSpacingItemDecoration;
 
@@ -74,7 +72,7 @@ public class CategoryFragment extends Fragment {
         bookList.add(new BookCategory("Western", "Western",R.drawable.node));
 
 
-        BookCatagoryAdapter adapter = new BookCatagoryAdapter(bookList,getContext());
+        BookCatagoryRecyclerAdapter adapter = new BookCatagoryRecyclerAdapter(bookList,getContext());
         bookCatagoryView.setAdapter(adapter);
 
 

@@ -12,19 +12,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.techhousestudio.locallibrary.R;
-import com.techhousestudio.locallibrary.models.Book;
 import com.techhousestudio.locallibrary.models.BookCategory;
 
 import java.util.List;
 
-public class BookCatagoryAdapter extends RecyclerView.Adapter<BookCatagoryAdapter.BookCategoryViewHolder> {
-    private TextView tvBookCategory;
-    private TextView tvCustomText;
-    private ImageView imgCategoryView;
+public class BookCatagoryRecyclerAdapter extends RecyclerView.Adapter<BookCatagoryRecyclerAdapter.BookCategoryViewHolder> {
+
     private List<BookCategory> bookCategoryList;
     private Context context;
 
-    public BookCatagoryAdapter(List<BookCategory> bookCategoryList, Context context) {
+    public BookCatagoryRecyclerAdapter(List<BookCategory> bookCategoryList, Context context) {
         this.bookCategoryList = bookCategoryList;
         this.context = context;
     }
@@ -39,7 +36,7 @@ public class BookCatagoryAdapter extends RecyclerView.Adapter<BookCatagoryAdapte
     public void onBindViewHolder(@NonNull BookCategoryViewHolder holder, int position) {
         BookCategory book = bookCategoryList.get(position);
         holder.tvBookCategory.setText(book.CategoryName);
-        holder.tvBookCustomText.setText("This is "+book.CategoryName+" Category.");
+        holder.tvBookDescription.setText("This is "+book.CategoryName+" Category.");
 
         Glide.with(context).load(book.imgCategory).into(holder.ivBookCategoryImage);
 
@@ -53,14 +50,14 @@ public class BookCatagoryAdapter extends RecyclerView.Adapter<BookCatagoryAdapte
 
     public class BookCategoryViewHolder extends RecyclerView.ViewHolder {
         TextView tvBookCategory;
-        TextView tvBookCustomText;
+        TextView tvBookDescription;
         ImageView ivBookCategoryImage;
 
         public BookCategoryViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            tvBookCategory = itemView.findViewById(R.id.txtcategory);
-            tvBookCustomText=itemView.findViewById(R.id.txtCustomText);
+            tvBookCategory = itemView.findViewById(R.id.tvcategory);
+            tvBookDescription=itemView.findViewById(R.id.tvDescription);
 
             ivBookCategoryImage = itemView.findViewById(R.id.imgcategory);
         }

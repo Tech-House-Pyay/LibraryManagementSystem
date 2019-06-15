@@ -1,12 +1,12 @@
 package com.techhousestudio.locallibrary.models;
 
 public class BookCategory {
-    public String CategoryName,CustomText;
+    public String CategoryName,Description;
     public int imgCategory;
 
-    public BookCategory(String categoryName, String customText, int imgCategory) {
+    public BookCategory(String categoryName, String description, int imgCategory) {
         CategoryName = categoryName;
-        CustomText = customText;
+        Description = description;
         this.imgCategory = imgCategory;
     }
 }
