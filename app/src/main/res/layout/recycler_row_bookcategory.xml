@@ -5,19 +5,21 @@
     android:orientation="vertical"
     app:cardCornerRadius="10dp"
     app:cardElevation="10dp"
-    android:layout_height="250dp">
+    android:layout_height="200dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
         <TextView
+            android:padding="10dp"
+
             android:id="@+id/tvcategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             android:text="Arts and Music"
             android:textSize="20sp"
-            android:textColor="#000"
+            android:textColor="#FDFAFA"
             android:textStyle="bold"
             android:fontFamily="monospace"
             />
@@ -26,38 +28,11 @@
             android:id="@+id/imgcategory"
             android:layout_width="match_parent"
         android:layout_height="200dp"
-
-
+            android:scaleType="fitXY"
             android:layout_below="@+id/tvcategory"
-
-
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="5dp"
-
-
             android:src="@drawable/romantic" />
 
-        <TextView
-            android:id="@+id/tvDescription"
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgcategory"
-
-
-
-
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="-63dp"
-            android:layout_marginBottom="-57dp"
-            android:text="This is romantic category."
-            android:textColor="#092BE7"
-            android:padding="10dp"
-            android:focusableInTouchMode="true"
-
-            android:textSize="15sp" />
 
     </RelativeLayout>
 
