@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.CategoryFragment">
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBookCategory"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="This is category fragment"
-        />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/recycler_row_bookcategory">
 
-
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

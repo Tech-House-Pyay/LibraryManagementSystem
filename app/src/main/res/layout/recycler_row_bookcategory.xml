@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:layout_height="250dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tvcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="Arts and Music"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            />
+
+        <ImageView
+            android:id="@+id/imgcategory"
+            android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+
+            android:layout_below="@+id/tvcategory"
+
+
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="5dp"
+
+
+            android:src="@drawable/romantic" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgcategory"
+
+
+
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="-63dp"
+            android:layout_marginBottom="-57dp"
+            android:text="This is romantic category."
+            android:textColor="#092BE7"
+            android:padding="10dp"
+            android:focusableInTouchMode="true"
+
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
