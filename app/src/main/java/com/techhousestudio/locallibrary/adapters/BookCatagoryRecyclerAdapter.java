@@ -36,7 +36,7 @@ public class BookCatagoryRecyclerAdapter extends RecyclerView.Adapter<BookCatago
     public void onBindViewHolder(@NonNull BookCategoryViewHolder holder, int position) {
         BookCategory book = bookCategoryList.get(position);
         holder.tvBookCategory.setText(book.CategoryName);
-        holder.tvBookDescription.setText("This is "+book.CategoryName+" Category.");
+
 
         Glide.with(context).load(book.imgCategory).into(holder.ivBookCategoryImage);
 
@@ -50,14 +50,14 @@ public class BookCatagoryRecyclerAdapter extends RecyclerView.Adapter<BookCatago
 
     public class BookCategoryViewHolder extends RecyclerView.ViewHolder {
         TextView tvBookCategory;
-        TextView tvBookDescription;
+
         ImageView ivBookCategoryImage;
 
         public BookCategoryViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tvBookCategory = itemView.findViewById(R.id.tvcategory);
-            tvBookDescription=itemView.findViewById(R.id.tvDescription);
+
 
             ivBookCategoryImage = itemView.findViewById(R.id.imgcategory);
         }
