@@ -3,6 +3,7 @@ package com.techhousestudio.locallibrary.ui;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
@@ -21,6 +22,8 @@ import com.techhousestudio.locallibrary.R;
 
 public class SettingFragment extends Fragment implements SharedPreferences.OnSharedPreferenceChangeListener{
     TextView tv;
+    ImageView imageView;
+    final int REQUEST_CODE=1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,21 +34,34 @@ public class SettingFragment extends Fragment implements SharedPreferences.OnSha
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        ImageView imageView=view.findViewById(R.id.imgbookdetail);
+
         super.onViewCreated(view, savedInstanceState);
+        imageView=view.findViewById(R.id.imgSetting);
         getFragmentManager().beginTransaction().replace(R.id.frag_setting, new LibrarySettingPreference())
                 .commit();
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(view.getContext());
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
-//        imageView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//                photoPickerIntent.setType("image/*");
-//                startActivityForResult(photoPickerIntent, SELECT_PHOTO);
-//            }
-//        });
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                Intent intent=new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                startActivityForResult(intent,REQUEST_CODE);
+            }
+
+        });
+
+
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode==REQUEST_CODE && resultCode== getActivity().RESULT_OK)
+        {
+            Uri photo=data.getData();
+            imageView.setImageURI(photo);
+        }
     }
 
     @Override

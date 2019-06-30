@@ -1,10 +1,6 @@
 package com.techhousestudio.locallibrary.ui;
 
-import android.app.Application;
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
