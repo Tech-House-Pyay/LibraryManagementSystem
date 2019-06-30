@@ -1,11 +1,14 @@
 package com.techhousestudio.locallibrary.ui;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,11 +31,20 @@ public class SettingFragment extends Fragment implements SharedPreferences.OnSha
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        ImageView imageView=view.findViewById(R.id.imgbookdetail);
         super.onViewCreated(view, savedInstanceState);
         getFragmentManager().beginTransaction().replace(R.id.frag_setting, new LibrarySettingPreference())
                 .commit();
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(view.getContext());
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+//                photoPickerIntent.setType("image/*");
+//                startActivityForResult(photoPickerIntent, SELECT_PHOTO);
+//            }
+//        });
 
     }
 
