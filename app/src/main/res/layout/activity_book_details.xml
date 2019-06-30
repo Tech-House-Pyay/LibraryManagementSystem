@@ -128,16 +128,16 @@
             </androidx.cardview.widget.CardView>
 
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@color/colorAccent"
-                android:text="Borrow"
-                android:textColor="#DB9938"
-                android:textSize="12sp" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorAccent"
+        android:text="Book Now"
+        android:textColor="#DB9938"
+        android:textSize="12sp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
