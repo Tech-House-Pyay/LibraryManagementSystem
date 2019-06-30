@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="tab_label">14sp</dimen>
+    <dimen name="tall_toolbar_height">200dp</dimen>
+    <dimen name="shrine_toolbar_offset_top">150dp</dimen>
+    <dimen name="shrine_toolbar_offset_start">16dp</dimen>
 </resources>

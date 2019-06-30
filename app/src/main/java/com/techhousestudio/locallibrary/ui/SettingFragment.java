@@ -43,6 +43,10 @@ public class SettingFragment extends Fragment implements SharedPreferences.OnSha
         if (size == "Small") {
             themeID = R.style.FontSizeSmall;
         }
+        else if(size == "Medium")
+        {
+            themeID=R.style.FontSizeMedium;
+        }
         else if (size == "Large") {
             themeID = R.style.FontSizeLarge;
         }

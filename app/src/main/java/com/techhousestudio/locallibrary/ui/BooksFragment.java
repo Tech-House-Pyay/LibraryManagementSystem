@@ -39,22 +39,23 @@ public class BooksFragment extends Fragment {
         rvBookList.addItemDecoration(new GridSpacingItemDecoration(2,10,true));
 
         List<Book> bookList = new ArrayList<>();
-        bookList.add(new Book("Android Development", "Mark", R.drawable.node));
-        bookList.add(new Book("Android Development", "Mark", R.drawable.node));
-        bookList.add(new Book("History Development", "Mark", R.drawable.node));
-        bookList.add(new Book("Html Development", "Mark", R.drawable.node));
-        bookList.add(new Book("Web Development", "Mark", R.drawable.node));
-        bookList.add(new Book("Android Development", "Mark", R.drawable.node));
-        bookList.add(new Book("Android Development", "Mg Aung", R.drawable.node));
-        bookList.add(new Book("Android Development", "Mark", R.drawable.node));
-        bookList.add(new Book("Android Development", "Mark", R.drawable.node));
-        bookList.add(new Book("Android Development", "Mark", R.drawable.node));
-        bookList.add(new Book("Android Development", "Mark", R.drawable.node));
-        bookList.add(new Book("Android Development", "Mark", R.drawable.node));
+        bookList.add(new Book("Android Development", "Mark", R.drawable.node,"Available"));
+        bookList.add(new Book("Android Development", "Mark", R.drawable.node,"Available"));
+        bookList.add(new Book("History Development", "Mark", R.drawable.node,"Available"));
+        bookList.add(new Book("Html Development", "Mark", R.drawable.node,"Not Available"));
+        bookList.add(new Book("Web Development", "Mark", R.drawable.node,"Available"));
+        bookList.add(new Book("Android Development", "Mark", R.drawable.node,"Available"));
+        bookList.add(new Book("Android Development", "Mg Aung", R.drawable.node,"Available"));
+        bookList.add(new Book("Android Development", "Mark", R.drawable.node,"Not Available"));
+        bookList.add(new Book("Android Development", "Mark", R.drawable.node,"Not Available"));
+        bookList.add(new Book("Android Development", "Mark", R.drawable.node,"Available"));
+        bookList.add(new Book("Android Development", "Mark", R.drawable.node,"Available"));
+        bookList.add(new Book("Android Development", "Mark", R.drawable.node,"Available"));
 
 
         BookRecyclerAdapter adapter = new BookRecyclerAdapter(getContext(), bookList);
         rvBookList.setAdapter(adapter);
 
     }
+
 }
