@@ -1,9 +1,11 @@
 package com.techhousestudio.locallibrary.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.techhousestudio.locallibrary.MainActivity;
 import com.techhousestudio.locallibrary.R;
 import com.techhousestudio.locallibrary.adapters.BookCatagoryRecyclerAdapter;
 import com.techhousestudio.locallibrary.models.BookCategory;
@@ -22,6 +25,7 @@ import java.util.List;
 
 public class CategoryFragment extends Fragment {
     private RecyclerView bookCatagoryView;
+    private ImageView selectedImage;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,6 +39,9 @@ public class CategoryFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         bookCatagoryView=view.findViewById(R.id.rvBookCategory);
+        selectedImage=view.findViewById(R.id.imgcategory);
+
+
         bookCatagoryView.setLayoutManager(new GridLayoutManager(getContext(), 1));
 
         bookCatagoryView.addItemDecoration(new GridSpacingItemDecoration(1,0,true));
@@ -66,7 +73,7 @@ public class CategoryFragment extends Fragment {
         bookList.add(new BookCategory("Sci-Fi & Fatasy", R.drawable.node));
         bookList.add(new BookCategory("Self-Help", R.drawable.node));
         bookList.add(new BookCategory("Sports",  R.drawable.node));
-        bookList.add(new BookCategory("Teen",  R.drawable.node));
+
         bookList.add(new BookCategory("Travel", R.drawable.node));
         bookList.add(new BookCategory("True Crime", R.drawable.node));
         bookList.add(new BookCategory("Western", R.drawable.node));
@@ -79,4 +86,5 @@ public class CategoryFragment extends Fragment {
 
 
     }
+
 }

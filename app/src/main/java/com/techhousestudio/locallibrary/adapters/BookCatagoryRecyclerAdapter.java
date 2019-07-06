@@ -1,6 +1,7 @@
 package com.techhousestudio.locallibrary.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.techhousestudio.locallibrary.R;
+import com.techhousestudio.locallibrary.SelectedCategory;
 import com.techhousestudio.locallibrary.models.BookCategory;
 
 import java.util.List;
@@ -20,6 +22,7 @@ public class BookCatagoryRecyclerAdapter extends RecyclerView.Adapter<BookCatago
 
     private List<BookCategory> bookCategoryList;
     private Context context;
+
 
     public BookCatagoryRecyclerAdapter(List<BookCategory> bookCategoryList, Context context) {
         this.bookCategoryList = bookCategoryList;
@@ -39,6 +42,13 @@ public class BookCatagoryRecyclerAdapter extends RecyclerView.Adapter<BookCatago
 
 
         Glide.with(context).load(book.imgCategory).into(holder.ivBookCategoryImage);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent=new Intent(context, SelectedCategory.class);
+                context.startActivity(intent);
+            }
+        });
 
     }
 

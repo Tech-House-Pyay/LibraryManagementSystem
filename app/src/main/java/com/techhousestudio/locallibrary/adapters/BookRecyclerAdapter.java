@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+//import com.techhousestudio.locallibrary.BookDetailsActivity;
 import com.techhousestudio.locallibrary.BookDetailsActivity;
 import com.techhousestudio.locallibrary.R;
 import com.techhousestudio.locallibrary.models.Book;
@@ -46,7 +47,7 @@ public class BookRecyclerAdapter extends RecyclerView.Adapter<BookRecyclerAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context,BookDetailsActivity.class);
+                Intent intent=new Intent(context, BookDetailsActivity.class);
                 Bundle bundle=new Bundle();
                 bundle.putString("BookTitle",book.title);
                 bundle.putInt("bookImage",book.imageUri);
